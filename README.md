@@ -1,14 +1,15 @@
 # Proyecto pensamiento computacional para ingenierias
-Mi proyecto consta de un programa capaz de calificar la atencion brindada a las usuarios de una tienda de videojuegos, y si cuentan con quejas o sujerencias llevarlos con el personal correspondiente.
+Mi proyecto consta de un programa capaz de calificar la atencion brindada a las usuarios de una tienda de videojuegos, y si cuentan con quejas o sujerencias este podrá llevarlos con el personal correspondiente. Este programa será capaz de ejecutar diversos conceptos de código.
 ### Contexto
-En las tiendas de vieojuegos no se cuenta con una terminal o codigo QR que pueda brindar un servicio asi, por lo que me llamo mucho la atencio como en otros establecimientos si se cuenta con algo asi. Ademas siento que no es un algoritmo tan dificil de programar y que voy a ser capaz de realizarlo.
+En las tiendas de vieojuegos, normalmente, no se cuenta con una terminal o codigo QR que pueda brindar una forma en que el usuario pueda calificar la atencion que se le fue proporcionada, y, en todo caso, cuente con alguna sugerencia o queja para poder mejorar el servicio.
 
-Muestra varias opciones "Calificar atencion", "Quejas", "Sugerencias"
+### Código 
+1. Print "Puntuar atencion" "Quejas" "Sugerencias"
 
-Si se escoge "Calificar atencion" se pide un numero entre 1-5, pasa al paso final
+2. If "Puntuar atencion" solocita numero entre 1 y 5
 
-Si se escoge "Quejas" se brinda el correo y numero telefonico, pasa por el paso final
+3. If "Quejas" se brinda el correo y numero telefonico del gerente
 
-SI se escoge "Sugerencias" se abre una interfaz donde se puede escribir, pasa por el paso final
+4. If "Sugerencias" se abre una interfaz donde se puede escribir max. 100 char
 
-Se muestra "Gracias por visitarnos", fin del programa 
+5. fin del programa 
