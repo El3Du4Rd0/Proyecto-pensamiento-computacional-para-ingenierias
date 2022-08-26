@@ -9,7 +9,6 @@ hora = int(0)
 minuto = int(0)
 
 """
-from random import random
 
 
 estrellas = 0
