@@ -5,7 +5,7 @@ por medio de una encuesta. Otra es saber si el usuario quiere dejar una queja pa
 #importar
 from time import sleep
 #diccionarios
-Diccionario = {
+diccionario = {
     "Preguntas" : {
         1:"¿Cómo calificaría la atención de los empleados?",
         2:"¿Cómo calificaría la calidad de nuestros productos?",
@@ -22,76 +22,76 @@ Diccionario = {
     }
     }
 #Funciones
-def promedio (P_1, P_2, P_3, P_4, P_5):
-    prom = (P_1 + P_2 + P_3 + P_4 + P_5)/5
+def promedio (p_1, p_2, p_3, p_4, p_5):
+    prom = (p_1 + p_2 + p_3 + p_4 + p_5)/5
     return prom
 #Código
-Res1 = "si"
-while Res1 == "si":
+res1 = "si"
+while res1 == "si":
     sleep (0.5)
     print ("¿Quiere responder nuestra encuesta de satisfaccion?")
     sleep (0.5)
-    Res1 = input("Introduzca su respuesta: |si| - |no| ==> ")
-    if Res1 == "no":
+    res1 = input("Introduzca su respuesta: |si| - |no| ==> ")
+    if res1 == "no":
         sleep (0.5)
         print ("Gracias por su tiempo")
     else:
         sleep (0.5)
         print ("¿Le gustaría poner una queja?")
         sleep (0.5)
-        Res2 = input("Introduzca su respuesta: |si| - |no| ==> ")
-        if Res2 == "si":
+        res2 = input("Introduzca su respuesta: |si| - |no| ==> ")
+        if res2 == "si":
             sleep (0.5)
             print ("¿Sobre que se quisiera quejar?")
             sleep (0.5)
-            Res3 = input ("|servicio| - |productos| - |establecimiento| - |empleados| - |precios| ==> ")
-            if Res3 == "servicio":
+            res3 = input ("|servicio| - |productos| - |establecimiento| - |empleados| - |precios| ==> ")
+            if res3 == "servicio":
                 sleep (0.5)
-                print (Diccionario["Quejas"][1])
-                sleep (0.5)
-                resQ = input("Escriba su respuesta: ")
-                print (f"Su respuesta fue: {resQ}")
-            elif Res3 == "productos":
-                sleep (0.5)
-                print (Diccionario["Quejas"][2])
+                print (diccionario["Quejas"][1])
                 sleep (0.5)
                 resQ = input("Escriba su respuesta: ")
                 print (f"Su respuesta fue: {resQ}")
-            elif Res3 == "establecimiento":
+            elif res3 == "productos":
                 sleep (0.5)
-                print (Diccionario["Quejas"][3])
-                sleep (0.5)
-                resQ = input("Escriba su respuesta: ")
-                print (f"Su respuesta fue: {resQ}")
-            elif Res3 == "empleados":
-                sleep (0.5)
-                print (Diccionario["Quejas"][4])
+                print (diccionario["Quejas"][2])
                 sleep (0.5)
                 resQ = input("Escriba su respuesta: ")
                 print (f"Su respuesta fue: {resQ}")
-            elif Res3 == "precios":
+            elif res3 == "establecimiento":
                 sleep (0.5)
-                print (Diccionario["Quejas"][5])
+                print (diccionario["Quejas"][3])
                 sleep (0.5)
                 resQ = input("Escriba su respuesta: ")
                 print (f"Su respuesta fue: {resQ}")
+            elif res3 == "empleados":
+                sleep (0.5)
+                print (diccionario["Quejas"][4])
+                sleep (0.5)
+                resQ = input("Escriba su respuesta: ")
+                print (f"Su respuesta fue: {resQ}")
+            elif res3 == "precios":
+                sleep (0.5)
+                print (diccionario["Quejas"][5])
+                sleep (0.5)
+                res_q = input("Escriba su respuesta: ")
+                print (f"Su respuesta fue: {res_q}")
         else:
             sleep (0.5)
             print ("Califique las siguientes preguntas usando numeros:")
             sleep (0.5)
-            print (Diccionario["Preguntas"][1])
+            print (diccionario["Preguntas"][1])
             res_1 = int(input())
             sleep (0.5)
-            print (Diccionario["Preguntas"][2])
+            print (diccionario["Preguntas"][2])
             res_2 = int(input())
             sleep (0.5)
-            print (Diccionario["Preguntas"][3])
+            print (diccionario["Preguntas"][3])
             res_3 = int(input())
             sleep (0.5)
-            print (Diccionario["Preguntas"][4])
+            print (diccionario["Preguntas"][4])
             res_4 = int(input())
             sleep (0.5)
-            print (Diccionario["Preguntas"][5])
+            print (diccionario["Preguntas"][5])
             res_5 = int(input())
             sleep (0.5)
             print ("Su promedio fue:")
