@@ -27,6 +27,7 @@ def pedir_estrellas():
     global promedio_E
     promedio_E = ((estrellas_1 + estrellas_2 + estrellas_3 + estrellas_4 + estrellas_5)/5)
     print (f"Su promedio de estrellas es: {promedio_E}")
+
 def pedir_quejas():
     global opcion_quejas
     print ("¿Qué es lo que no le gusto de nuestro servicio?")
@@ -39,12 +40,21 @@ def pedir_quejas():
     time.sleep (1)
     opcion_quejas = input ("Seleccione su opcion colocando un numero: ")
     print ("Gracias por su preferencia. Mejoraremos el servicio.")
-#Código
-print ("1.Calificar el servicio 2.Poner una queja")
-time.sleep (0.5)
-opcion_menu = int(input("Seleccione que opcion quiere escoger: "))
 
-if (opcion_menu == 1):
-    pedir_estrellas ()
-elif (opcion_menu == 2):
-    pedir_quejas ()
+def willy ():
+    opcion_servicio = input("¿Quiere calificar nuestro servicio? 1=sí 2=no ")
+    servicio = 0
+    if opcion_servicio == 2:
+        servicio += 5    
+    while servicio <= 2:
+        print ("Opciones:")
+        time.sleep (0.5)
+        print ("1.Calificar el servicio --- 2.Poner una queja")
+        opcion_menu = int(input("Seleccione una opcion escribiendo 1 o 2: "))
+        if (opcion_menu == 1):
+            pedir_estrellas ()
+        elif (opcion_menu == 2):
+            pedir_quejas ()
+        servicio += 1
+#código
+willy ()
