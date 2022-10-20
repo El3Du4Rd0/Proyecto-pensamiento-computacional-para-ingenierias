@@ -2,59 +2,66 @@
 Mi programa consta de dos funciones. Una es medir con estrellas la satisfaccion de los usuario de una tienda de videojuegos
 por medio de una encuesta. Otra es saber si el usuario quiere dejar una queja para poder mejorar el servicio.
 """
-# Importar
-import time
-# Funciones
-def pedir_estrellas():
-    print ("Califique las siguientes preguntas con 1 a 5 estrellas.")
-    time.sleep (1)
-    print ("¿Cómo calificaría la atención de los empleados?")
-    estrellas_1 = int(input())
-    time.sleep (0.5)
-    print ("¿Cómo calificaría la calidad de nuestros productos?")
-    estrellas_2 = int (input())
-    time.sleep (0.5)
-    print ("¿Cómo calificaría los precios de los productos?")
-    estrellas_3 = int (input())
-    time.sleep (0.5)
-    print ("¿Cómo calificaría las medidas sanitarias del establecimiento?")
-    estrellas_4 = int (input())
-    time.sleep (0.5)
-    print ("¿Cómo calificaría la condición del establecimiento?")
-    estrellas_5 = int (input())
-    time.sleep (0.5)
-    print ("Gracias por su preferencia.")
-    global promedio_E
-    promedio_E = ((estrellas_1 + estrellas_2 + estrellas_3 + estrellas_4 + estrellas_5)/5)
-    print (f"Su promedio de estrellas es: {promedio_E}")
-
-def pedir_quejas():
-    global opcion_quejas
-    print ("¿Qué es lo que no le gusto de nuestro servicio?")
-    time.sleep (1)
-    print ("1. Los empleados.")
-    time.sleep (0.5)
-    print ("2. Estado del establecimiento.")
-    time.sleep (0.5)
-    print ("3. Calidad de nuestros productos.")
-    time.sleep (1)
-    opcion_quejas = input ("Seleccione su opcion colocando un numero: ")
-    print ("Gracias por su preferencia. Mejoraremos el servicio.")
-
-def willy ():
-    opcion_servicio = input("¿Quiere calificar nuestro servicio? 1=sí 2=no ")
-    servicio = 0
-    if opcion_servicio == 2:
-        servicio += 5    
-    while servicio <= 2:
-        print ("Opciones:")
-        time.sleep (0.5)
-        print ("1.Calificar el servicio --- 2.Poner una queja")
-        opcion_menu = int(input("Seleccione una opcion escribiendo 1 o 2: "))
-        if (opcion_menu == 1):
-            pedir_estrellas ()
-        elif (opcion_menu == 2):
-            pedir_quejas ()
-        servicio += 1
-#código
-willy ()
+#importar
+from time import sleep
+#diccionarios
+Dicc_Preguntas = {
+    "primera":"¿Cómo calificaría la atención de los empleados?",
+    "segunda":"¿Cómo calificaría la calidad de nuestros productos?",
+    "tercera":"¿Cómo calificaría los precios de los productos?",
+    "cuarta":"¿Cómo calificaría nuestros servicios?",
+    "quinta":"¿Cómo calificaría la condición del establecimiento?"
+}
+Dicc_Quejas = {
+    "primera":"¿Qué es lo que no le gusto de nuestro servicio?",
+    "segunda":"¿Qué es lo que no le gusto de nuestros productos?",
+    "tercera":"¿Qué es lo que no le gusto de nuestro establecimiento?",
+    "cuarta":"¿Qué es lo que no le gusto de nuestros empleados?",
+    "quinta":"¿Qué es lo que no le gusto de nuestros precios?"
+}
+#Funciones
+def promedio (P_1, P_2, P_3, P_4, P_5):
+    prom = (P_1 + P_2 + P_3 + P_4 + P_5)/5
+    return prom
+#Código
+Res1 = "si"
+while Res1 == "si":
+    print ("¿Quiere responder nuestra encuesta de satisfaccion?")
+    Res1 = input("Introduzca su respuesta: |si| - |no| ==> ")
+    if Res1 == "no":
+        print ("Gracias por su tiempo")
+    else:
+        print ("¿Le gustaría poner una queja?")
+        Res2 = input("Introduzca su respuesta: |si| - |no| ==> ")
+        if Res2 == "si":
+            print ("¿Sobre que se quisiera quejar?")
+            Res3 = input ("|servicio| - |productos| - |establecimiento| - |empleados| - |precios| ==> ")
+            if Res3 == "servicio":
+                print (Dicc_Quejas["primera"])
+                resQ = input()
+            elif Res3 == "productos":
+                print (Dicc_Quejas["segunda"])
+                resQ = input()
+            elif Res3 == "establecimiento":
+                print (Dicc_Quejas["tercera"])
+                resQ = input()
+            elif Res3 == "empleados":
+                print (Dicc_Quejas["cuarta"])
+                resQ = input()
+            elif Res3 == "precios":
+                print (Dicc_Quejas["quinta"])
+                resQ = input()
+        else:
+            print ("Califique las siguientes preguntas:")
+            print (Dicc_Preguntas["primera"])
+            res_1 = int(input())
+            print (Dicc_Preguntas["segunda"])
+            res_2 = int(input())
+            print (Dicc_Preguntas["tercera"])
+            res_3 = int(input())
+            print (Dicc_Preguntas["cuarta"])
+            res_4 = int(input())
+            print (Dicc_Preguntas["quinta"])
+            res_5 = int(input())
+            print ("Su promedio fue:")
+            print (promedio(res_1,res_2,res_3,res_4,res_5))
