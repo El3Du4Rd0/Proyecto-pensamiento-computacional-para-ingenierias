@@ -18,3 +18,9 @@ ciclo infinito de preguntas debido a la exixtencia de un ciclo While
 al comienzo del programa.
 Despues el programa va soltando una serie de preguntas que tiene que
 ser respondidas con las palabras exactas que se encuentran entre |rayas|.
+
+## Adicionalmente
+
+En el programa existe el import time, que investigue por mi cuenta, y
+unicamente lo utilizo para que el codigo no se genere de golpe cada vez
+que hay un print. 
